@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 
 data = pd.read_csv("knn/car.data")
-print(data.head())
+# print(data.head())
 
 # Change data str into integers
 le = preprocessing.LabelEncoder()
@@ -28,4 +28,23 @@ y = list(clss)
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(
     X, y, test_size=0.1)
 
-print(x_train, y_test)
+# print(x_train, y_test)
+
+# How many K neighbors
+model = KNeighborsClassifier(n_neighbors=9)
+
+model.fit(x_train, y_train)
+
+# Accuracy
+acc = model.score(x_train, y_train)
+print(acc)
+
+predicted = model.predict(x_test)
+names = ["unacc", "acc", "good", "vgood"]
+
+for x in range(len(x_test)):
+    print("Predicted: ", names[predicted[x]], "/ Data: ",
+          x_test[x], "/ Actual: ", names[y_test[x]])
+    # Show distance for each point
+    n = model.kneighbors([x_test[x]], 9, True)
+    print("N:", n)
