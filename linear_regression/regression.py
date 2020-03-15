@@ -8,7 +8,7 @@ import pickle
 from matplotlib import style
 
 # Get data, sep is for seperator as data in csv is seperated by semicolon
-data = pd.read_csv("student-mat.csv", sep=";")
+data = pd.read_csv("linear_regression/student-mat.csv", sep=";")
 
 # Attributes
 data = data[["G1", "G2", "G3", "studytime", "failures", "absences"]]
@@ -42,7 +42,7 @@ for _ in range(300):
             pickle.dump(linear, f)
 """
 
-pickle_in = open("studentmodel.pickle", "rb")
+pickle_in = open("linear_regression/studentmodel.pickle", "rb")
 linear = pickle.load(pickle_in)
 
 
