@@ -17,7 +17,7 @@ x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(
     x, y, test_size=0.2)
 
 # print(x_train, y_train)
-classes = ['malignant' 'benign']
+classes = ['malignant', 'benign']
 
 # c stand for soft margin
 clf = svm.SVC(kernel="linear", C=2)

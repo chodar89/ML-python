@@ -4,3 +4,8 @@
 - Link to [DATA](https://archive.ics.uci.edu/ml/datasets/Student+Performance)
 2. KNN - K Nearest Neighbors
 - Link to [DATA](https://archive.ics.uci.edu/ml/datasets/Car+Evaluation)
+3. SVM - Support Vector Machines
+- Use breast cancer data from sklearn dataset and ML to predict is it 'malignant' or 'benign'
+4. K Means Cluster
+- Link to [perforamnce evaluation](https://scikit-learn.org/stable/modules/clustering.html#clustering-evaluation)
+- Link to [example code](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
